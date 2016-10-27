@@ -1,7 +1,11 @@
 # Calculation of a graph of names
 
+See the project 
+[https://github.com/jdinkla/codingdavinci-familiennamen](https://github.com/jdinkla/codingdavinci-familiennamen)
+for the context.
+
 This program calculates the edges of a graph of names where two nodes have an edge if they have a 
-[Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance) of 1
+[Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance) of 1.
 
 * Input is a file that contains a list of names, separated by newline '\n'.
 * Output is a file that contains two names separated by TAB '\t'. These two names have a 
