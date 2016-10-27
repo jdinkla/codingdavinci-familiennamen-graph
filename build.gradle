@@ -1,0 +1,31 @@
+/**
+ * (c) 2016, Jörn Dinkla, http://www.dinkla.net
+ *
+ * see the file LICENSE in the root directory
+ */
+
+group 'net.dinkla'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'groovy'
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.4.7'
+    compile 'org.apache.commons:commons-lang3:3.4'
+    compile 'com.codepoetics:protonpack:1.10'
+
+    testCompile "org.spockframework:spock-core:1.0-groovy-2.4"
+}
+
+task 'create-dirs' << {
+    sourceSets.all { set ->
+        set.allSource.srcDirs.each {it.mkdirs()}
+    }
+}
